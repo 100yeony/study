@@ -79,3 +79,15 @@ docker exec -it <컨테이너아이디> /bin/bash
 
 # 컨테이너 종료
 exit
+
+## 사용하지 않는 시스템 자원 지우기
+docker system prune -a -f
+
+## 빌드 캐시 삭제
+docker buildx prune -f
+
+
+## docker & spring-otel-listener 실행하기
+경로: /opt/otel-aiops/spring-otel-listener/build/libs
+jar 파일 실행: java -jar spring-otel-listener-0.0.1-SNAPSHOT.jar
+

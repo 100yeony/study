@@ -5,7 +5,7 @@ https://pkgs.tailscale.com/stable/#macos
 systemctl enable 
 
 
-## 로컬 노트북에서 tailscale 세팅
+## 맥에서 tailscale 세팅
 https://tailscale.com/kb/1080/cli?tab=macos
 
 ## alias 추가
@@ -19,9 +19,15 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 source ~/.zshrc
 
 
+
 ## tailscale 멤버 추가
+지현이가 설정에서 멤버로 나의 이메일 추가
 
 ## tailscale 머신 share 추가
+내 머신에서 share 누르고 지현이 gmail 계정 추가
+
+## 서버에서 머신 share 추가
+서버에서 share 누르고 gmail 계정 추가
 
 ## 서버와 다른 네트워크일때 ssh로 접속하기
 ssh rnp@100.83.227.59

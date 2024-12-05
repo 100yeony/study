@@ -63,6 +63,8 @@
     ===========================
 
 ## 이전 Python 버전 삭제
+    dnf remove python3.9
+    
     ===========================
     [root@localhost profile.d]# dnf remove python3.9
     종속성이 해결되었습니다.
