@@ -31,6 +31,6 @@ ex) git branch -d local-v1.0
 git tag -d [TAG_NAME]
 ex) git tag -d v1.0
 
-원격제 태그 삭제
+원격지 태그 삭제
 git push -u origin :tags/[TAG_NAME]
 ex) git push -u origin :tags/v1.0
