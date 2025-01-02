@@ -3,24 +3,24 @@
 ## maven을 사용하여 라이브러리 추가
     maven은 자바 프로젝트의 의존성을 관리하는 도구
     pom.xml의 <dependencies> 태그 안에 라이브러리 의존성을 추가하여 사용할 수 있다.
-    ```
-    <dependencies>
-        <dependency>
-            <groupId>group-id</groupId>
-            <artifactId>artifact-id</artifactId>
-            <version>version</version>
-        </dependency>
-    </dependencies>
-    ```
+```xml
+<dependencies>
+    <dependency>
+        <groupId>group-id</groupId>
+        <artifactId>artifact-id</artifactId>
+        <version>version</version>
+    </dependency>
+</dependencies>
+```
     
 
 ## gradle을 사용하여 라이브러리 추가
     build.gradle 파일을 열고 dependencies 블록 내에 사용할 라이브러리 의존성을 추가한다.
-    ```
-     dependencies {
-        implementation 'group-id:artifact-id:version'
-    }
-    ```
+```
+    dependencies {
+    implementation 'group-id:artifact-id:version'
+}
+```
    
 
 ## JAR 파일 직접 추가(수동 라이브러리 관리)
