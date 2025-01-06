@@ -30,3 +30,9 @@
 
 	JDK 1.7 = JAVA 7 버전
 	JDK 17 = JAVA 17 버전
+
+# Java ByteCode 
+자바 바이트코드 버전은 JDK 버전과 매핑된다. 
+java7은 바이트코드 버전 51.0
+java8은 바이트코드 버전 52.0
+
