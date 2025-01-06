@@ -2,7 +2,10 @@
 git tag는 의미있는 특정 시점을 Snapshot 형태로 기록하는 방법.
 tag는 만든 이후에는 수정이 불가능함.
 read only 상태
-tag를 이용하여 특정 시점으로 롤백하거나, 배포 버전을 생성하는 등의 용도로 사용됨.s
+tag를 이용하여 특정 시점으로 롤백하거나, 배포 버전을 생성하는 등의 용도로 사용됨.
+
+# 특정 tag 적용하기
+git checkout tags/[TAG_NAME]
 
 # tag 생성
 git tag -a [TAG_NAME] -m "[MESSAGE]"
