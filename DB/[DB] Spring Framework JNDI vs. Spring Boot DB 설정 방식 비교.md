@@ -32,32 +32,39 @@ ex.
 
 
 ex. 실제 DB와 연결하는 코드는 다음과 같음.
-```InitialContext initCtx = new InitialContext();
-DataSource ds = (DataSource) initCtx.lookup("java:comp/env");```
+```
+InitialContext initCtx = new InitialContext();
+DataSource ds = (DataSource) initCtx.lookup("java:comp/env");
+```
 
 
 # Spring Boot 에서 DB 설정 방식
 pom.xml(maven) 또는 build.gradle(gradle)에 의존성 추가
 ex. mysql을 사용할 경우
-```<dependency>
+```
+<dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
-</dependency>```
+</dependency>
+```
 
 또는 데이터 소스 관련 자동 구성으로 할 수 있음.
 spring-boot-starter-data-jpa 와 같은 스타터를 의존성으로 추가하면 spring boot는 다음 설정을 찾아 자동으로 데이터 소스를 구성함.
 
 ex. application.yml에 DB 설정 정보를 작성
-```spring:
+```
+spring:
   datasource:
     url: jdbc:mysql://localhost:3306/mydb
     username: myuser
     password: mypassword
-    driver-class-name: com.mysql.cj.jdbc.Driver```
+    driver-class-name: com.mysql.cj.jdbc.Driver
+ ```
 
 
 ex. 코드 상에서 사용하기.
-```public Optional<List<User>> findAll() {
+```
+public Optional<List<User>> findAll() {
     List<User> Users = new ArrayList<>();
     try {
         Connection connection = dataSource.getConnection();
