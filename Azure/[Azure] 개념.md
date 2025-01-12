@@ -91,6 +91,8 @@
     - RBAC에서 역할 할당
     - 자신 또는 다른 사용자에게 Owner 역할 할당
 
+* 다른 사용자에게 역할 할당이 가능한 역할: 소유자, 사용자 액세스 관리자
+
 
 * tenant 그룹은 VNET 에 허용되지 않은 리소스 유형 정책이 적용되며 VNET 생성이 불가함
 * VM을 만들기 위해서는 VNET을 먼저 생성해야 함.
@@ -106,3 +108,25 @@
 * 로그 분석 시 KQL(Kusto Query Language)를 사용해야 함.
 * 구독, 리소스 그룹, 리소스에만 태그와 lock 할당 가능
 * Azure AD(Active Directory)에서 사용자 bulk delete를 하려면 사용자의 계정 이름(UPN)만 포함된 파일을 업로드해야함.
+
+* csv로 사용자 생성 시, 게스트 계정은 초대 New-MgInvitation cmdlet을 사용
+* csv로 사용자 생성할 때는 New-MgUser 새로운 사용자 생성
+
+* 저장소 계정의 액세스 키가 자동으로 순환되도록 하려면 Azure Storage 계정 키 순환을 사용하여 Azure Key Vault를 구성
+
+* 셀프 서비스 암호 재설정(SSPR)을 개별 사용자에게 할당할 수 없습니다. 그룹이어야 합니다. 보안 그룹이나 M365 그룹이 될 수 있습니다.
+
+* 동기화 그룹에는 1개의 클라우드 엔드포인트와 1개 이상의 서버 엔드포인트가 필요하다.
+
+* 실시간 마이그레이션은 LRS 복제를 사용하는 스토리지 계정에서만 가능. LRS는 3개의 데이터 복제본을 유지
+* ZRS(Zone-redundant storage) 영역 중복 저장소는 단일 지역의 3개 저장소 클러스터에 걸쳐 데이터를 동기식으로 복제함. 
+
+* dataset CSV file, driveset CSV file은 WAImportExport에서 데이터 복사해서 드라이브로 옮기기 위해 사용됨. 
+
+* AzCopy는 스토리지 계정 간에 Blob, File을 복사하는데 사용할 수 있는 명령
+
+* 데이터를 영구적으로 저장하려면 Azure File 사용
+
+* Azure Import/Export 서비스는 Azure File 저장소, Azure Blob 저장소에서 사용할 수 있다.
+
+* port 80: http web / port 443: https / port 445: SMB protocol share file / port 3389: Remote desktop protocol
