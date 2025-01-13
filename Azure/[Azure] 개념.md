@@ -118,6 +118,8 @@
 
 * 동기화 그룹에는 1개의 클라우드 엔드포인트와 1개 이상의 서버 엔드포인트가 필요하다.
 
+
+* LRS(로컬 중복 스토리지) / ZRS(영역 중복 스토리지) / GRS(지역 중복 스토리지)
 * 실시간 마이그레이션은 LRS 복제를 사용하는 스토리지 계정에서만 가능. LRS는 3개의 데이터 복제본을 유지
 * ZRS(Zone-redundant storage) 영역 중복 저장소는 단일 지역의 3개 저장소 클러스터에 걸쳐 데이터를 동기식으로 복제함. 
 
@@ -130,3 +132,7 @@
 * Azure Import/Export 서비스는 Azure File 저장소, Azure Blob 저장소에서 사용할 수 있다.
 
 * port 80: http web / port 443: https / port 445: SMB protocol share file / port 3389: Remote desktop protocol
+
+* storage account 중 LRS, GRS, RA-GRS는 archive tier 가능. 
+* ZRS, GZRS, RA-GZRS는 불가
+* ZRS로 변환하려면 Storage V2, Premium block blob, Priminum File share, LRS여야함.
