@@ -85,6 +85,9 @@
     - 기여자(Contributor): 할당된 사용 권한 제어 범위 내에서 모든 리소스를 관리(생성,수정,삭제)할 수 있지만 다른 계정에 액세스 권한 할당은 불가
     - 독자(Reader): 할당된 권한 범위 내에서 모든 리소스 정보만 확인 가능, 변경 불가
     - 네트워크 기여자(network contributor): 네트워크 리소스 생성 등의 관리는 할 수 있지만, 네트워크에 직접 액세스 불가
+    
+    - Logic App Contributor: Logic App을 생성하고 관리할 수 있지만, 액세스 불가
+    - Logic App Operator: Logic App을 읽고 활성화할 수 있지만, 편집이나 업데이트 불가
 
 - 사용자 액세스 관리자(User Access Administrator) 역할
     - 리소스에 대한 사용자 액세스 관리
@@ -99,10 +102,6 @@
 * 구독은 하나의 관리 그룹에만 속할 수 있음.
 * 정책은 정책이 적용된 후에 생성된 리소스에 대해 적용됨. 이미 생성된 리소스에는 새로운 정책 적용 불가.
 * 리소스 그룹 또는 구독에 적용된 태그는 상속되지 않음. 
-
-
-- Logic App Contributor: Logic App을 생성하고 관리할 수 있지만, 액세스 불가
-- Logic App Operator: Logic App을 읽고 활성화할 수 있지만, 편집이나 업데이트 불가
 
 
 * 로그 분석 시 KQL(Kusto Query Language)를 사용해야 함.
