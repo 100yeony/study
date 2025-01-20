@@ -99,6 +99,7 @@
 
 * tenant 그룹은 VNET 에 허용되지 않은 리소스 유형 정책이 적용되며 VNET 생성이 불가함
 * VM을 만들기 위해서는 VNET을 먼저 생성해야 함.
+* VNET이 다른 VNET과 peering되어 있으면 주소 공간 추가/삭제 불가. 다시 VNET 생성 후 추가 필요.
 * 구독은 하나의 관리 그룹에만 속할 수 있음.
 * 정책은 정책이 적용된 후에 생성된 리소스에 대해 적용됨. 이미 생성된 리소스에는 새로운 정책 적용 불가.
 * 리소스 그룹 또는 구독에 적용된 태그는 상속되지 않음. 
@@ -130,7 +131,7 @@
 
 * Azure Import/Export 서비스는 Azure File 저장소, Azure Blob 저장소에서 사용할 수 있다.
 
-* port 80: http web / port 443: https / port 445: SMB protocol share file / port 3389: Remote desktop protocol / port 53: DNS
+* port 80: http web / port 443: https / port 445: SMB protocol share file / port 3389: RDP(Remote desktop protocol) / port 53: DNS
 
 * storage account 중 LRS, GRS, RA-GRS는 archive tier 가능. 
 * ZRS, GZRS, RA-GZRS는 불가
@@ -141,3 +142,5 @@
 
 
 * SKU(Stock Keeping Unit): 동일한 제품에서 기능에 따라 다른 유닛을 제공. 유통업계에서는 재고 관리를 위한 최소 분류 단위로 사용됨. 코카콜라도 용량에 다라 각각 다른 유닛으로 재고 관리를 하고 있음. 
+
+* 스토리지를 다른 리소스 그룹으로 이동할 수 있지만, 물리적 위치는 변하지 않는다.
