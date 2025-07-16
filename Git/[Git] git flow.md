@@ -49,3 +49,32 @@ git checkout feature/branch_name
 ```
 
 
+# Git 명령어
+```bash
+# 원격지에 잘못 올라간 커밋 하나 삭제하기(원격지 커밋 히스토리에서도 삭제)
+git reset --hard HEAD~1
+git push origin {branch_name} --force
+```
+
+```bash
+# 로컬 커밋 하나 지우기(변경사항은 작업디렉토리에 유지)
+git reset HEAD~1
+```
+
+```bash
+# 원격지에 잘못 올린 디렉토리 삭제하고 gitignore에 추가하기
+# git index에서만 삭제. 로컬에는 유지됨
+git rm -r --cached {bad_folder}
+git commit -m "remove bad folder"
+# git ignore 수정
+git push origin {branch_name}
+```
+
+### git branch 삭제
+```bash
+# 로컬에서 삭제
+git branch -d {branch_name}
+# 원격지에서도 삭제
+git push origin -d {branch_name}
+```
+
